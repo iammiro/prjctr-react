@@ -1,9 +1,10 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
+import Todo from './components';
 
-import Hello from './components';
+const tasksList = ["Task 1", "Task 2"];
 
-render(
-	<Hello />,
-	document.getElementById('app')
+ReactDOM.render(
+	<Todo tasks={tasksList} />,
+	document.getElementById('todo')
 );
