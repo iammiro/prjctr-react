@@ -32,8 +32,8 @@ export class Todo extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Todo App</h1>
+            <div className="wrapper">
+                <header className="header">Todo App</header>
                 <AddNewTask updateList={this.updateList}/>
                 <ToDoAppList tasks={this.state.tasks} remove={this.removeTask}/>
             </div>

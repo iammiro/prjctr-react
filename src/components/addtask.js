@@ -17,7 +17,7 @@ export class AddNewTask extends React.Component {
     render() {
         return (
             <form onSubmit={this.justSubmitted}>
-                <input type="text"/>
+                <input type="text" className="taskInput" placeholder="Enter new task"/>
             </form>
         );
     }

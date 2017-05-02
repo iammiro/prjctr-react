@@ -21876,10 +21876,10 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                null,
+	                { className: 'wrapper' },
 	                _react2.default.createElement(
-	                    'h1',
-	                    null,
+	                    'header',
+	                    { className: 'header' },
 	                    'Todo App'
 	                ),
 	                _react2.default.createElement(_addtask2.default, { updateList: this.updateList }),
@@ -21945,7 +21945,7 @@
 	            return _react2.default.createElement(
 	                'form',
 	                { onSubmit: this.justSubmitted },
-	                _react2.default.createElement('input', { type: 'text' })
+	                _react2.default.createElement('input', { type: 'text', className: 'taskInput', placeholder: 'Enter new task' })
 	            );
 	        }
 	    }]);
@@ -22006,7 +22006,7 @@
 	            var items = this.props.tasks.map(function (elem, i) {
 	                return _react2.default.createElement(
 	                    'li',
-	                    { key: i },
+	                    { key: i, className: 'taskItem' },
 	                    _react2.default.createElement(
 	                        'span',
 	                        null,
@@ -22014,7 +22014,7 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        'button',
-	                        { onClick: _this2.remove },
+	                        { onClick: _this2.remove, className: 'delButton' },
 	                        'X'
 	                    )
 	                );
