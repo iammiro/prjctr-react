@@ -13,14 +13,21 @@ export class Todo extends React.Component {
 
     updateList(text) {
         const updatedTasks = this.state.tasks;
-        updatedTasks.push(text);
+        updatedTasks.unshift(text);
         this.setState({tasks: updatedTasks});
+        this.updateLocalStorage(updatedTasks);
     }
 
     removeTask(text) {
         const updatedTasks = this.state.tasks;
         updatedTasks.splice(updatedTasks.indexOf(text), 1);
         this.setState({tasks: updatedTasks});
+        this.updateLocalStorage(updatedTasks);
+    }
+
+    updateLocalStorage(updatedTasks) {
+        console.log('saved');
+        localStorage.setItem('storedTasks', JSON.stringify(updatedTasks));
     }
 
     render() {

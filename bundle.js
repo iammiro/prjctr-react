@@ -62,6 +62,11 @@
 
 	var tasksList = ["Task 1", "Task 2"];
 
+	var tasks = localStorage.getItem('storedTasks');
+	if (tasks) {
+		tasksList = JSON.parse(tasks);
+	}
+
 	_reactDom2.default.render(_react2.default.createElement(_components2.default, { tasks: tasksList }), document.getElementById('todo'));
 
 /***/ }),
@@ -21845,8 +21850,9 @@
 	        key: 'updateList',
 	        value: function updateList(text) {
 	            var updatedTasks = this.state.tasks;
-	            updatedTasks.push(text);
+	            updatedTasks.unshift(text);
 	            this.setState({ tasks: updatedTasks });
+	            this.updateLocalStorage(updatedTasks);
 	        }
 	    }, {
 	        key: 'removeTask',
@@ -21854,6 +21860,13 @@
 	            var updatedTasks = this.state.tasks;
 	            updatedTasks.splice(updatedTasks.indexOf(text), 1);
 	            this.setState({ tasks: updatedTasks });
+	            this.updateLocalStorage(updatedTasks);
+	        }
+	    }, {
+	        key: 'updateLocalStorage',
+	        value: function updateLocalStorage(updatedTasks) {
+	            console.log('saved');
+	            localStorage.setItem('storedTasks', JSON.stringify(updatedTasks));
 	        }
 	    }, {
 	        key: 'render',
