@@ -21837,6 +21837,7 @@
 
 	        _this.state = { tasks: props.tasks };
 	        _this.updateList = _this.updateList.bind(_this);
+	        _this.removeTask = _this.removeTask.bind(_this);
 	        return _this;
 	    }
 
@@ -21845,6 +21846,13 @@
 	        value: function updateList(text) {
 	            var updatedTasks = this.state.tasks;
 	            updatedTasks.push(text);
+	            this.setState({ tasks: updatedTasks });
+	        }
+	    }, {
+	        key: 'removeTask',
+	        value: function removeTask(text) {
+	            var updatedTasks = this.state.tasks;
+	            updatedTasks.splice(updatedTasks.indexOf(text), 1);
 	            this.setState({ tasks: updatedTasks });
 	        }
 	    }, {
@@ -21859,7 +21867,7 @@
 	                    'Todo App'
 	                ),
 	                _react2.default.createElement(_addtask2.default, { updateList: this.updateList }),
-	                _react2.default.createElement(_applist2.default, { tasks: this.state.tasks })
+	                _react2.default.createElement(_applist2.default, { tasks: this.state.tasks, remove: this.removeTask })
 	            );
 	        }
 	    }]);
@@ -21962,17 +21970,37 @@
 	    function ToDoAppList() {
 	        _classCallCheck(this, ToDoAppList);
 
-	        return _possibleConstructorReturn(this, (ToDoAppList.__proto__ || Object.getPrototypeOf(ToDoAppList)).call(this));
+	        var _this = _possibleConstructorReturn(this, (ToDoAppList.__proto__ || Object.getPrototypeOf(ToDoAppList)).call(this));
+
+	        _this.remove = _this.remove.bind(_this);
+	        return _this;
 	    }
 
 	    _createClass(ToDoAppList, [{
+	        key: 'remove',
+	        value: function remove(elem) {
+	            var value = elem.target.parentNode.querySelector('span').innerText;
+	            this.props.remove(value);
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var _this2 = this;
+
 	            var items = this.props.tasks.map(function (elem, i) {
 	                return _react2.default.createElement(
 	                    'li',
 	                    { key: i },
-	                    elem
+	                    _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        elem
+	                    ),
+	                    _react2.default.createElement(
+	                        'button',
+	                        { onClick: _this2.remove },
+	                        'X'
+	                    )
 	                );
 	            });
 	            return _react2.default.createElement(
