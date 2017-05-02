@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Todo from './components';
+import Todo from './components/todo';
 
-var tasksList = ["Task 1", "Task 2"];
+let tasksList = [];
 
 const tasks = localStorage.getItem('storedTasks');
 if(tasks) {

@@ -54,20 +54,20 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _components = __webpack_require__(182);
+	var _todo = __webpack_require__(185);
 
-	var _components2 = _interopRequireDefault(_components);
+	var _todo2 = _interopRequireDefault(_todo);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var tasksList = ["Task 1", "Task 2"];
+	var tasksList = [];
 
 	var tasks = localStorage.getItem('storedTasks');
 	if (tasks) {
 		tasksList = JSON.parse(tasks);
 	}
 
-	_reactDom2.default.render(_react2.default.createElement(_components2.default, { tasks: tasksList }), document.getElementById('todo'));
+	_reactDom2.default.render(_react2.default.createElement(_todo2.default, { tasks: tasksList }), document.getElementById('todo'));
 
 /***/ }),
 /* 1 */
@@ -21800,7 +21800,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 182 */
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21816,11 +21819,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _addtask = __webpack_require__(183);
+	var _addtask = __webpack_require__(186);
 
 	var _addtask2 = _interopRequireDefault(_addtask);
 
-	var _applist = __webpack_require__(184);
+	var _applist = __webpack_require__(187);
 
 	var _applist2 = _interopRequireDefault(_applist);
 
@@ -21891,7 +21894,7 @@
 	exports.default = Todo;
 
 /***/ }),
-/* 183 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21953,7 +21956,7 @@
 	exports.default = AddNewTask;
 
 /***/ }),
-/* 184 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
