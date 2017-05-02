@@ -7,4 +7,5 @@ const tasksList = ["Task 1", "Task 2"];
 ReactDOM.render(
 	<Todo tasks={tasksList} />,
 	document.getElementById('todo')
+
 );
