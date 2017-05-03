@@ -53,21 +53,23 @@ table {
     border-spacing: 0;
 }
 
+/*custom css*/
+
 .wrapper {
-    background-color: #333845;
+    background-color: #ffffff;
     color: #a1abc0;
     min-height: 100vh;
     height: 100%;
 }
 
 .header {
-    color: #8192ad;
     font-family: 'Open Sans', sans-serif;
     font-size: 33px;
     font-weight: 300;
     line-height: 80px;
+    color: #ffffff;
     text-transform: uppercase;
-    background-color: #1a2131;
+    background-color: #00b9ff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,19 +77,23 @@ table {
 
 .delButton {
     border: none;
-    width: 200px;
-    height: 90px;
-    background-color: #1f74ad;
-    background-image: linear-gradient(80deg, rgba(36, 138, 185, 0.66) 0%, rgba(64, 63, 144, 0.66) 100%);
+    width: 40px;
+    height: 40px;
+    background-color: #50d2c2;
+    border-radius: 50%;
     cursor: pointer;
-    color: red;
-    font-size: 40px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 300;
 }
 
 .taskInput {
     width: 90%;
     height: 50px;
-    border-radius: 3px 4px 4px 3px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(000, 0, 0, .1);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -112,17 +118,18 @@ table {
 }
 
 .taskItem {
-    opacity: 0.5;
     width: 90%;
     height: 90px;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), inset 0 1px 7px rgba(25, 26, 28, 0.78);
-    border-radius: 3px 4px 4px 3px;
-    background-color: #232c3b;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin: 5%;
+    border-bottom: 2px solid rgba(255, 0, 0, .05);
+    color: #1d1d26;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 48px;
 }
 
 .taskItem:hover {
@@ -130,11 +137,11 @@ table {
 }
 
 .taskItem span {
-    color: #cad4ec;
     font-family: 'Open Sans', sans-serif;
-    font-size: 26px;
     font-weight: 300;
     line-height: 80px;
     text-transform: uppercase;
     padding-left: 20px;
+    color: #1d1d26;
+    font-size: 32px;
 }

@@ -54,7 +54,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _todo = __webpack_require__(185);
+	var _todo = __webpack_require__(182);
 
 	var _todo2 = _interopRequireDefault(_todo);
 
@@ -21800,10 +21800,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21819,11 +21816,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _addtask = __webpack_require__(186);
+	var _addtask = __webpack_require__(183);
 
 	var _addtask2 = _interopRequireDefault(_addtask);
 
-	var _applist = __webpack_require__(187);
+	var _applist = __webpack_require__(184);
 
 	var _applist2 = _interopRequireDefault(_applist);
 
@@ -21894,7 +21891,7 @@
 	exports.default = Todo;
 
 /***/ }),
-/* 186 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21956,7 +21953,7 @@
 	exports.default = AddNewTask;
 
 /***/ }),
-/* 187 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22015,7 +22012,7 @@
 	                    _react2.default.createElement(
 	                        'button',
 	                        { onClick: _this2.remove, className: 'delButton' },
-	                        'X'
+	                        ' X '
 	                    )
 	                );
 	            });
